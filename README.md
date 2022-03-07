@@ -1,1 +1,9 @@
-# Drug Review Sentiment Analysis
+# Drug Review Sentiment Analysis - Initial Results
+Presented here is my initial results and process for sentiment analysis of Drug Reviews. The Drug Review dataset from the UCI Machine Learning Repository will be used in this analysis. The data was collected initially through online pharmaceutical review sites (Drugs. com) and contained 215063 instances. The dataset provides patient reviews on drugs, related conditions and a 10-star patient rating reflecting overall patient satisfaction. There are seven attributes in total; instance ID, drug name (categorical), condition (categorical), patient review (text), rating (numerical), date (date), and useful count, i.e., the number of users who found the review helpful (numerical). 
+
+The overall goal is to determine the effectiveness of the particular drugs within the dataset using sentiment analysis. The existing systems to assess sentiment either follow a lexicon-based, a learning-based, or a hybrid approach. The process being used in this project is that of a hybrid approach - by combining the use of lexicon and learning-based techniques. 
+
+In the initial stages of this process involved data cleaning, EDA and pre-processing of the 
+
+General-purpose sentiment lexicons, such as TextBlob, and VADER will be used for determining the polarity of a review. Addisitional lexicons such as AFINN and SentiWord will potentially be added as well. Each lexicon used utilizes a rule-based approach to assessing the polarity of a particular review. These libraries score words indidually before providing a overall polarity score for the particular review. Scores closer to -1 are considered negative, 0 is neutral and +1 is considered positive. Using these partcular scores they are averaged to eliminate biases from the dictionaries. From the averaged score a sentiment classification label is generated using follow rules; positive = polarity > 0, neutral = polarity == 0, negative = polarity < 0. The rules and number sentiment classifications labels are currently being reviewed and subject to change.
+
